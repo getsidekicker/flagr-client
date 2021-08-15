@@ -1,0 +1,5 @@
+templateDir: /local/.custom_templates
+files:
+  model.mustache:
+    templateType: Model
+    destinationFilename: .php
