@@ -574,7 +574,7 @@ class EvaluationApi
             );
         }
 
-        $resourcePath = '/evaluation/batch';
+        $resourcePath = '/evaluation/batch/';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
