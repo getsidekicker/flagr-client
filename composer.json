@@ -12,11 +12,12 @@
   "homepage": "https://openapi-generator.tech",
   "license": "MIT",
   "require": {
-    "php": ">=7.4",
+    "php": "^7.4 || ^8.0",
     "ext-curl": "*",
     "ext-json": "*",
     "ext-mbstring": "*",
-    "guzzlehttp/guzzle": "^6.2"
+    "guzzlehttp/guzzle": "^7.3",
+    "guzzlehttp/psr7": "^1.7 || ^2.0"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.0",

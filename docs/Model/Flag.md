@@ -16,6 +16,6 @@ Name | Type | Description | Notes
 **notes** | **string** | flag usage details in markdown format | [optional]
 **created_by** | **string** |  | [optional]
 **updated_by** | **string** |  | [optional]
-**updated_at** | [**\DateTime**](\DateTime.md) |  | [optional]
+**updated_at** | **\DateTime** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

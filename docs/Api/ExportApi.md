@@ -1,6 +1,6 @@
 # Flagr\Client\ExportApi
 
-All URIs are relative to http://localhost/api/v1.
+All URIs are relative to /api/v1.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\SplFileObject**](../Model/\SplFileObject.md)
+**\SplFileObject**
 
 ### Authorization
 
