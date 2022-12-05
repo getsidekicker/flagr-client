@@ -7,3 +7,8 @@ docker run --rm --volume $(pwd):/local openapitools/openapi-generator-cli:v6.2.1
   --generator-name php \
   --output /local
 
+if command -v composer &> /dev/null
+then
+  composer fixer
+  composer rector
+fi
