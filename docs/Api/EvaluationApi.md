@@ -1,11 +1,11 @@
 # Flagr\Client\EvaluationApi
 
-All URIs are relative to http://localhost/api/v1.
+All URIs are relative to /api/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**postEvaluation()**](EvaluationApi.md#postEvaluation) | **POST** /evaluation | 
-[**postEvaluationBatch()**](EvaluationApi.md#postEvaluationBatch) | **POST** /evaluation/batch | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**postEvaluation()**](EvaluationApi.md#postEvaluation) | **POST** /evaluation |  |
+| [**postEvaluationBatch()**](EvaluationApi.md#postEvaluationBatch) | **POST** /evaluation/batch |  |
 
 
 ## `postEvaluation()`
@@ -41,9 +41,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Flagr\Client\Model\EvalContext**](../Model/EvalContext.md)| evalution context |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**\Flagr\Client\Model\EvalContext**](../Model/EvalContext.md)| evalution context | |
 
 ### Return type
 
@@ -95,9 +95,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Flagr\Client\Model\EvaluationBatchRequest**](../Model/EvaluationBatchRequest.md)| evalution batch request |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**\Flagr\Client\Model\EvaluationBatchRequest**](../Model/EvaluationBatchRequest.md)| evalution batch request | |
 
 ### Return type
 

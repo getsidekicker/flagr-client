@@ -1,11 +1,11 @@
 # Flagr\Client\DistributionApi
 
-All URIs are relative to http://localhost/api/v1.
+All URIs are relative to /api/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**findDistributions()**](DistributionApi.md#findDistributions) | **GET** /flags/{flagID}/segments/{segmentID}/distributions | 
-[**putDistributions()**](DistributionApi.md#putDistributions) | **PUT** /flags/{flagID}/segments/{segmentID}/distributions | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**findDistributions()**](DistributionApi.md#findDistributions) | **GET** /flags/{flagID}/segments/{segmentID}/distributions |  |
+| [**putDistributions()**](DistributionApi.md#putDistributions) | **PUT** /flags/{flagID}/segments/{segmentID}/distributions |  |
 
 
 ## `findDistributions()`
@@ -42,10 +42,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **segment_id** | **int**| numeric ID of the segment |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **segment_id** | **int**| numeric ID of the segment | |
 
 ### Return type
 
@@ -101,11 +101,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **segment_id** | **int**| numeric ID of the segment |
- **body** | [**\Flagr\Client\Model\PutDistributionsRequest**](../Model/PutDistributionsRequest.md)| array of distributions |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **segment_id** | **int**| numeric ID of the segment | |
+| **body** | [**\Flagr\Client\Model\PutDistributionsRequest**](../Model/PutDistributionsRequest.md)| array of distributions | |
 
 ### Return type
 

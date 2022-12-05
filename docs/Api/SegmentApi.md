@@ -1,14 +1,14 @@
 # Flagr\Client\SegmentApi
 
-All URIs are relative to http://localhost/api/v1.
+All URIs are relative to /api/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createSegment()**](SegmentApi.md#createSegment) | **POST** /flags/{flagID}/segments | 
-[**deleteSegment()**](SegmentApi.md#deleteSegment) | **DELETE** /flags/{flagID}/segments/{segmentID} | 
-[**findSegments()**](SegmentApi.md#findSegments) | **GET** /flags/{flagID}/segments | 
-[**putSegment()**](SegmentApi.md#putSegment) | **PUT** /flags/{flagID}/segments/{segmentID} | 
-[**putSegmentsReorder()**](SegmentApi.md#putSegmentsReorder) | **PUT** /flags/{flagID}/segments/reorder | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createSegment()**](SegmentApi.md#createSegment) | **POST** /flags/{flagID}/segments |  |
+| [**deleteSegment()**](SegmentApi.md#deleteSegment) | **DELETE** /flags/{flagID}/segments/{segmentID} |  |
+| [**findSegments()**](SegmentApi.md#findSegments) | **GET** /flags/{flagID}/segments |  |
+| [**putSegment()**](SegmentApi.md#putSegment) | **PUT** /flags/{flagID}/segments/{segmentID} |  |
+| [**putSegmentsReorder()**](SegmentApi.md#putSegmentsReorder) | **PUT** /flags/{flagID}/segments/reorder |  |
 
 
 ## `createSegment()`
@@ -45,10 +45,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag to get |
- **body** | [**\Flagr\Client\Model\CreateSegmentRequest**](../Model/CreateSegmentRequest.md)| create a segment under a flag |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag to get | |
+| **body** | [**\Flagr\Client\Model\CreateSegmentRequest**](../Model/CreateSegmentRequest.md)| create a segment under a flag | |
 
 ### Return type
 
@@ -100,10 +100,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **segment_id** | **int**| numeric ID of the segment |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **segment_id** | **int**| numeric ID of the segment | |
 
 ### Return type
 
@@ -155,9 +155,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag to get |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag to get | |
 
 ### Return type
 
@@ -211,11 +211,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **segment_id** | **int**| numeric ID of the segment |
- **body** | [**\Flagr\Client\Model\PutSegmentRequest**](../Model/PutSegmentRequest.md)| update a segment |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **segment_id** | **int**| numeric ID of the segment | |
+| **body** | [**\Flagr\Client\Model\PutSegmentRequest**](../Model/PutSegmentRequest.md)| update a segment | |
 
 ### Return type
 
@@ -267,10 +267,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **body** | [**\Flagr\Client\Model\PutSegmentReorderRequest**](../Model/PutSegmentReorderRequest.md)| reorder segments |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **body** | [**\Flagr\Client\Model\PutSegmentReorderRequest**](../Model/PutSegmentReorderRequest.md)| reorder segments | |
 
 ### Return type
 
