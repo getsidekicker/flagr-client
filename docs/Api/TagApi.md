@@ -1,13 +1,13 @@
 # Flagr\Client\TagApi
 
-All URIs are relative to http://localhost/api/v1.
+All URIs are relative to /api/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createTag()**](TagApi.md#createTag) | **POST** /flags/{flagID}/tags | 
-[**deleteTag()**](TagApi.md#deleteTag) | **DELETE** /flags/{flagID}/tags/{tagID} | 
-[**findAllTags()**](TagApi.md#findAllTags) | **GET** /tags | 
-[**findTags()**](TagApi.md#findTags) | **GET** /flags/{flagID}/tags | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createTag()**](TagApi.md#createTag) | **POST** /flags/{flagID}/tags |  |
+| [**deleteTag()**](TagApi.md#deleteTag) | **DELETE** /flags/{flagID}/tags/{tagID} |  |
+| [**findAllTags()**](TagApi.md#findAllTags) | **GET** /tags |  |
+| [**findTags()**](TagApi.md#findTags) | **GET** /flags/{flagID}/tags |  |
 
 
 ## `createTag()`
@@ -44,10 +44,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **body** | [**\Flagr\Client\Model\CreateTagRequest**](../Model/CreateTagRequest.md)| create a tag |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **body** | [**\Flagr\Client\Model\CreateTagRequest**](../Model/CreateTagRequest.md)| create a tag | |
 
 ### Return type
 
@@ -99,10 +99,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **tag_id** | **int**| numeric ID of the tag |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **tag_id** | **int**| numeric ID of the tag | |
 
 ### Return type
 
@@ -156,11 +156,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **limit** | **int**| the numbers of tags to return | [optional]
- **offset** | **int**| return tags given the offset, it should usually set together with limit | [optional]
- **value_like** | **string**| return tags partially matching given value | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **int**| the numbers of tags to return | [optional] |
+| **offset** | **int**| return tags given the offset, it should usually set together with limit | [optional] |
+| **value_like** | **string**| return tags partially matching given value | [optional] |
 
 ### Return type
 
@@ -212,9 +212,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
 
 ### Return type
 

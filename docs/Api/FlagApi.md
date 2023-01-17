@@ -1,18 +1,18 @@
 # Flagr\Client\FlagApi
 
-All URIs are relative to http://localhost/api/v1.
+All URIs are relative to /api/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createFlag()**](FlagApi.md#createFlag) | **POST** /flags | 
-[**deleteFlag()**](FlagApi.md#deleteFlag) | **DELETE** /flags/{flagID} | 
-[**findFlags()**](FlagApi.md#findFlags) | **GET** /flags | 
-[**getFlag()**](FlagApi.md#getFlag) | **GET** /flags/{flagID} | 
-[**getFlagEntityTypes()**](FlagApi.md#getFlagEntityTypes) | **GET** /flags/entity_types | 
-[**getFlagSnapshots()**](FlagApi.md#getFlagSnapshots) | **GET** /flags/{flagID}/snapshots | 
-[**putFlag()**](FlagApi.md#putFlag) | **PUT** /flags/{flagID} | 
-[**restoreFlag()**](FlagApi.md#restoreFlag) | **PUT** /flags/{flagID}/restore | 
-[**setFlagEnabled()**](FlagApi.md#setFlagEnabled) | **PUT** /flags/{flagID}/enabled | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createFlag()**](FlagApi.md#createFlag) | **POST** /flags |  |
+| [**deleteFlag()**](FlagApi.md#deleteFlag) | **DELETE** /flags/{flagID} |  |
+| [**findFlags()**](FlagApi.md#findFlags) | **GET** /flags |  |
+| [**getFlag()**](FlagApi.md#getFlag) | **GET** /flags/{flagID} |  |
+| [**getFlagEntityTypes()**](FlagApi.md#getFlagEntityTypes) | **GET** /flags/entity_types |  |
+| [**getFlagSnapshots()**](FlagApi.md#getFlagSnapshots) | **GET** /flags/{flagID}/snapshots |  |
+| [**putFlag()**](FlagApi.md#putFlag) | **PUT** /flags/{flagID} |  |
+| [**restoreFlag()**](FlagApi.md#restoreFlag) | **PUT** /flags/{flagID}/restore |  |
+| [**setFlagEnabled()**](FlagApi.md#setFlagEnabled) | **PUT** /flags/{flagID}/enabled |  |
 
 
 ## `createFlag()`
@@ -48,9 +48,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Flagr\Client\Model\CreateFlagRequest**](../Model/CreateFlagRequest.md)| create a flag |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**\Flagr\Client\Model\CreateFlagRequest**](../Model/CreateFlagRequest.md)| create a flag | |
 
 ### Return type
 
@@ -101,9 +101,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
 
 ### Return type
 
@@ -163,17 +163,17 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **limit** | **int**| the numbers of flags to return | [optional]
- **enabled** | **bool**| return flags having given enabled status | [optional]
- **description** | **string**| return flags exactly matching given description | [optional]
- **tags** | **string**| return flags with the given tags (comma separated) | [optional]
- **description_like** | **string**| return flags partially matching given description | [optional]
- **key** | **string**| return flags matching given key | [optional]
- **offset** | **int**| return flags given the offset, it should usually set together with limit | [optional]
- **preload** | **bool**| return flags with preloaded segments and variants | [optional]
- **deleted** | **bool**| return all deleted flags | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **int**| the numbers of flags to return | [optional] |
+| **enabled** | **bool**| return flags having given enabled status | [optional] |
+| **description** | **string**| return flags exactly matching given description | [optional] |
+| **tags** | **string**| return flags with the given tags (comma separated) | [optional] |
+| **description_like** | **string**| return flags partially matching given description | [optional] |
+| **key** | **string**| return flags matching given key | [optional] |
+| **offset** | **int**| return flags given the offset, it should usually set together with limit | [optional] |
+| **preload** | **bool**| return flags with preloaded segments and variants | [optional] |
+| **deleted** | **bool**| return all deleted flags | [optional] |
 
 ### Return type
 
@@ -225,9 +225,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag to get |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag to get | |
 
 ### Return type
 
@@ -330,9 +330,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag to get |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag to get | |
 
 ### Return type
 
@@ -385,10 +385,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag to get |
- **body** | [**\Flagr\Client\Model\PutFlagRequest**](../Model/PutFlagRequest.md)| update a flag |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag to get | |
+| **body** | [**\Flagr\Client\Model\PutFlagRequest**](../Model/PutFlagRequest.md)| update a flag | |
 
 ### Return type
 
@@ -440,9 +440,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag to get |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag to get | |
 
 ### Return type
 
@@ -495,10 +495,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag to get |
- **body** | [**\Flagr\Client\Model\SetFlagEnabledRequest**](../Model/SetFlagEnabledRequest.md)| set flag enabled state |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag to get | |
+| **body** | [**\Flagr\Client\Model\SetFlagEnabledRequest**](../Model/SetFlagEnabledRequest.md)| set flag enabled state | |
 
 ### Return type
 

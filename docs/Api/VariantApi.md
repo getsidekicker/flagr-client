@@ -1,13 +1,13 @@
 # Flagr\Client\VariantApi
 
-All URIs are relative to http://localhost/api/v1.
+All URIs are relative to /api/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createVariant()**](VariantApi.md#createVariant) | **POST** /flags/{flagID}/variants | 
-[**deleteVariant()**](VariantApi.md#deleteVariant) | **DELETE** /flags/{flagID}/variants/{variantID} | 
-[**findVariants()**](VariantApi.md#findVariants) | **GET** /flags/{flagID}/variants | 
-[**putVariant()**](VariantApi.md#putVariant) | **PUT** /flags/{flagID}/variants/{variantID} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createVariant()**](VariantApi.md#createVariant) | **POST** /flags/{flagID}/variants |  |
+| [**deleteVariant()**](VariantApi.md#deleteVariant) | **DELETE** /flags/{flagID}/variants/{variantID} |  |
+| [**findVariants()**](VariantApi.md#findVariants) | **GET** /flags/{flagID}/variants |  |
+| [**putVariant()**](VariantApi.md#putVariant) | **PUT** /flags/{flagID}/variants/{variantID} |  |
 
 
 ## `createVariant()`
@@ -44,10 +44,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **body** | [**\Flagr\Client\Model\CreateVariantRequest**](../Model/CreateVariantRequest.md)| create a variant |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **body** | [**\Flagr\Client\Model\CreateVariantRequest**](../Model/CreateVariantRequest.md)| create a variant | |
 
 ### Return type
 
@@ -99,10 +99,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **variant_id** | **int**| numeric ID of the variant |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **variant_id** | **int**| numeric ID of the variant | |
 
 ### Return type
 
@@ -154,9 +154,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
 
 ### Return type
 
@@ -210,11 +210,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **variant_id** | **int**| numeric ID of the variant |
- **body** | [**\Flagr\Client\Model\PutVariantRequest**](../Model/PutVariantRequest.md)| update a variant |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **variant_id** | **int**| numeric ID of the variant | |
+| **body** | [**\Flagr\Client\Model\PutVariantRequest**](../Model/PutVariantRequest.md)| update a variant | |
 
 ### Return type
 

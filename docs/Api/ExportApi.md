@@ -1,11 +1,11 @@
 # Flagr\Client\ExportApi
 
-All URIs are relative to http://localhost/api/v1.
+All URIs are relative to /api/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getExportEvalCacheJSON()**](ExportApi.md#getExportEvalCacheJSON) | **GET** /export/eval_cache/json | 
-[**getExportSqlite()**](ExportApi.md#getExportSqlite) | **GET** /export/sqlite | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getExportEvalCacheJSON()**](ExportApi.md#getExportEvalCacheJSON) | **GET** /export/eval_cache/json |  |
+| [**getExportSqlite()**](ExportApi.md#getExportSqlite) | **GET** /export/sqlite |  |
 
 
 ## `getExportEvalCacheJSON()`
@@ -96,13 +96,13 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **exclude_snapshots** | **bool**| export without snapshots data - useful for smaller db without snapshots | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **exclude_snapshots** | **bool**| export without snapshots data - useful for smaller db without snapshots | [optional] |
 
 ### Return type
 
-[**\SplFileObject**](../Model/\SplFileObject.md)
+**\SplFileObject**
 
 ### Authorization
 

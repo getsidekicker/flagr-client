@@ -1,13 +1,13 @@
 # Flagr\Client\ConstraintApi
 
-All URIs are relative to http://localhost/api/v1.
+All URIs are relative to /api/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createConstraint()**](ConstraintApi.md#createConstraint) | **POST** /flags/{flagID}/segments/{segmentID}/constraints | 
-[**deleteConstraint()**](ConstraintApi.md#deleteConstraint) | **DELETE** /flags/{flagID}/segments/{segmentID}/constraints/{constraintID} | 
-[**findConstraints()**](ConstraintApi.md#findConstraints) | **GET** /flags/{flagID}/segments/{segmentID}/constraints | 
-[**putConstraint()**](ConstraintApi.md#putConstraint) | **PUT** /flags/{flagID}/segments/{segmentID}/constraints/{constraintID} | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createConstraint()**](ConstraintApi.md#createConstraint) | **POST** /flags/{flagID}/segments/{segmentID}/constraints |  |
+| [**deleteConstraint()**](ConstraintApi.md#deleteConstraint) | **DELETE** /flags/{flagID}/segments/{segmentID}/constraints/{constraintID} |  |
+| [**findConstraints()**](ConstraintApi.md#findConstraints) | **GET** /flags/{flagID}/segments/{segmentID}/constraints |  |
+| [**putConstraint()**](ConstraintApi.md#putConstraint) | **PUT** /flags/{flagID}/segments/{segmentID}/constraints/{constraintID} |  |
 
 
 ## `createConstraint()`
@@ -45,11 +45,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **segment_id** | **int**| numeric ID of the segment |
- **body** | [**\Flagr\Client\Model\CreateConstraintRequest**](../Model/CreateConstraintRequest.md)| create a constraint |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **segment_id** | **int**| numeric ID of the segment | |
+| **body** | [**\Flagr\Client\Model\CreateConstraintRequest**](../Model/CreateConstraintRequest.md)| create a constraint | |
 
 ### Return type
 
@@ -102,11 +102,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **segment_id** | **int**| numeric ID of the segment |
- **constraint_id** | **int**| numeric ID of the constraint |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **segment_id** | **int**| numeric ID of the segment | |
+| **constraint_id** | **int**| numeric ID of the constraint | |
 
 ### Return type
 
@@ -159,10 +159,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **segment_id** | **int**| numeric ID of the segment |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **segment_id** | **int**| numeric ID of the segment | |
 
 ### Return type
 
@@ -217,12 +217,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **flag_id** | **int**| numeric ID of the flag |
- **segment_id** | **int**| numeric ID of the segment |
- **constraint_id** | **int**| numeric ID of the constraint |
- **body** | [**\Flagr\Client\Model\CreateConstraintRequest**](../Model/CreateConstraintRequest.md)| create a constraint |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag | |
+| **segment_id** | **int**| numeric ID of the segment | |
+| **constraint_id** | **int**| numeric ID of the constraint | |
+| **body** | [**\Flagr\Client\Model\CreateConstraintRequest**](../Model/CreateConstraintRequest.md)| create a constraint | |
 
 ### Return type
 

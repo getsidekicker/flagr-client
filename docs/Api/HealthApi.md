@@ -1,10 +1,10 @@
 # Flagr\Client\HealthApi
 
-All URIs are relative to http://localhost/api/v1.
+All URIs are relative to /api/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getHealth()**](HealthApi.md#getHealth) | **GET** /health | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getHealth()**](HealthApi.md#getHealth) | **GET** /health |  |
 
 
 ## `getHealth()`
