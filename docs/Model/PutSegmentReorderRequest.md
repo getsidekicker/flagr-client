@@ -1,4 +1,4 @@
-# # PutSegmentReorderRequest
+# PutSegmentReorderRequest
 
 ## Properties
 

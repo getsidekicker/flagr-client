@@ -1,5 +1,7 @@
 # Flagr\Client\ExportApi
 
+
+
 All URIs are relative to /api/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -11,12 +13,12 @@ All URIs are relative to /api/v1, except if the operation defines another base p
 ## `getExportEvalCacheJSON()`
 
 ```php
-getExportEvalCacheJSON(): object
+getExportEvalCacheJSON($ids, $keys, $enabled, $tags, $tags_operator): object
 ```
 
 
 
-Export JSON format of the eval cache dump
+Export JSON format of the eval cache dump, with optional filtering
 
 ### Example
 
@@ -31,9 +33,14 @@ $apiInstance = new Flagr\Client\Api\ExportApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$ids = array(56); // int[] | CSV of flag IDs to include (e.g. 1,2,3). When provided, keys/enabled/tags are ignored.
+$keys = array('keys_example'); // string[] | CSV of flag keys to include (e.g. one,two). When provided, enabled/tags are ignored.
+$enabled = True; // bool | Filter by enabled status (omit to return all)
+$tags = array('tags_example'); // string[] | CSV of tag values to filter by (e.g. foo,bar)
+$tags_operator = 'ANY'; // string | Tag matching operator: ANY (default) returns flags with any of the tags, ALL returns flags with all tags
 
 try {
-    $result = $apiInstance->getExportEvalCacheJSON();
+    $result = $apiInstance->getExportEvalCacheJSON($ids, $keys, $enabled, $tags, $tags_operator);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ExportApi->getExportEvalCacheJSON: ', $e->getMessage(), PHP_EOL;
@@ -42,7 +49,13 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ids** | [**int[]**](../Model/int.md)| CSV of flag IDs to include (e.g. 1,2,3). When provided, keys/enabled/tags are ignored. | [optional] |
+| **keys** | [**string[]**](../Model/string.md)| CSV of flag keys to include (e.g. one,two). When provided, enabled/tags are ignored. | [optional] |
+| **enabled** | **bool**| Filter by enabled status (omit to return all) | [optional] |
+| **tags** | [**string[]**](../Model/string.md)| CSV of tag values to filter by (e.g. foo,bar) | [optional] |
+| **tags_operator** | **string**| Tag matching operator: ANY (default) returns flags with any of the tags, ALL returns flags with all tags | [optional] [default to &#39;ANY&#39;] |
 
 ### Return type
 

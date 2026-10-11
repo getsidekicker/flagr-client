@@ -1,5 +1,7 @@
 # Flagr\Client\ConstraintApi
 
+Constraint is the unit of defining a small subset of users
+
 All URIs are relative to /api/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |

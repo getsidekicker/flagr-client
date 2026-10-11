@@ -1,10 +1,10 @@
-# # FlagSnapshot
+# FlagSnapshot
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  |
+**id** | **int** |  | [optional] [readonly]
 **updated_by** | **string** |  | [optional]
 **flag** | [**\Flagr\Client\Model\Flag**](Flag.md) |  |
 **updated_at** | **string** |  |

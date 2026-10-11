@@ -1,11 +1,11 @@
-# # Constraint
+# Constraint
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly]
-**property** | **string** |  |
+**property** | **string** | The property name from the entity context to evaluate. Supports nested field access: use dots (e.g., &#x60;user.name&#x60;) for nested objects and brackets (e.g., &#x60;users[0]&#x60;) for array indices. |
 **operator** | **string** |  |
 **value** | **string** |  |
 

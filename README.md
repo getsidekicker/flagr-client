@@ -6,7 +6,7 @@ Flagr is a feature flagging, A/B testing and dynamic configuration microservice.
 
 ### Requirements
 
-PHP 7.4 and later.
+PHP 8.1 and later.
 
 ### Composer
 

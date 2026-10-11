@@ -1,4 +1,4 @@
-# # SegmentDebugLog
+# SegmentDebugLog
 
 ## Properties
 

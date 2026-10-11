@@ -1,9 +1,8 @@
 parameters:
     level: 4
+    phpVersion: 80100
     treatPhpDocTypesAsCertain: false
     parallel:
         processTimeout: 180.0
     paths:
         - ./lib
-    ignoreErrors:
-        - '/Variable \$body in isset\(\) always exists and is not nullable/'

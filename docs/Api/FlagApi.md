@@ -1,14 +1,18 @@
 # Flagr\Client\FlagApi
 
+Everything about the flag
+
 All URIs are relative to /api/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createFlag()**](FlagApi.md#createFlag) | **POST** /flags |  |
 | [**deleteFlag()**](FlagApi.md#deleteFlag) | **DELETE** /flags/{flagID} |  |
+| [**duplicateFlag()**](FlagApi.md#duplicateFlag) | **POST** /flags/{flagID}/duplicate |  |
 | [**findFlags()**](FlagApi.md#findFlags) | **GET** /flags |  |
 | [**getFlag()**](FlagApi.md#getFlag) | **GET** /flags/{flagID} |  |
 | [**getFlagEntityTypes()**](FlagApi.md#getFlagEntityTypes) | **GET** /flags/entity_types |  |
+| [**getFlagSnapshotMaxID()**](FlagApi.md#getFlagSnapshotMaxID) | **GET** /flags/snapshots/max_id | Get the max flag snapshot ID (config change version) |
 | [**getFlagSnapshots()**](FlagApi.md#getFlagSnapshots) | **GET** /flags/{flagID}/snapshots |  |
 | [**putFlag()**](FlagApi.md#putFlag) | **PUT** /flags/{flagID} |  |
 | [**restoreFlag()**](FlagApi.md#restoreFlag) | **PUT** /flags/{flagID}/restore |  |
@@ -116,6 +120,62 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `duplicateFlag()`
+
+```php
+duplicateFlag($flag_id, $body): \Flagr\Client\Model\Flag
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new Flagr\Client\Api\FlagApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$flag_id = 56; // int | numeric ID of the flag to duplicate
+$body = new \Flagr\Client\Model\DuplicateFlagRequest(); // \Flagr\Client\Model\DuplicateFlagRequest | optional overrides for the new flag
+
+try {
+    $result = $apiInstance->duplicateFlag($flag_id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FlagApi->duplicateFlag: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flag_id** | **int**| numeric ID of the flag to duplicate | |
+| **body** | [**\Flagr\Client\Model\DuplicateFlagRequest**](../Model/DuplicateFlagRequest.md)| optional overrides for the new flag | [optional] |
+
+### Return type
+
+[**\Flagr\Client\Model\Flag**](../Model/Flag.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -297,10 +357,63 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getFlagSnapshotMaxID()`
+
+```php
+getFlagSnapshotMaxID(): \Flagr\Client\Model\FlagSnapshotMaxID
+```
+
+Get the max flag snapshot ID (config change version)
+
+Returns the highest (most recent) flag_snapshot id. flag_snapshot is an append-only changelog — every flag configuration mutation (create, update, delete, restore of flags, segments, variants, constraints, distributions, or tags) inserts a new row with a monotonically increasing id. This makes the max id a lightweight single source of truth for detecting any configuration change. Consumers can store this value and poll it periodically: if the value changes, at least one flag's configuration has been modified and caches should be invalidated. This is vastly more efficient than polling the flags list or individual flags.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new Flagr\Client\Api\FlagApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->getFlagSnapshotMaxID();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FlagApi->getFlagSnapshotMaxID: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Flagr\Client\Model\FlagSnapshotMaxID**](../Model/FlagSnapshotMaxID.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `getFlagSnapshots()`
 
 ```php
-getFlagSnapshots($flag_id): \Flagr\Client\Model\FlagSnapshot[]
+getFlagSnapshots($flag_id, $limit, $offset, $sort): \Flagr\Client\Model\FlagSnapshot[]
 ```
 
 
@@ -319,9 +432,12 @@ $apiInstance = new Flagr\Client\Api\FlagApi(
     new GuzzleHttp\Client()
 );
 $flag_id = 56; // int | numeric ID of the flag to get
+$limit = 56; // int | the number of snapshots to return
+$offset = 56; // int | return snapshots given the offset, it should usually set together with limit
+$sort = 'sort_example'; // string | sort order
 
 try {
-    $result = $apiInstance->getFlagSnapshots($flag_id);
+    $result = $apiInstance->getFlagSnapshots($flag_id, $limit, $offset, $sort);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FlagApi->getFlagSnapshots: ', $e->getMessage(), PHP_EOL;
@@ -333,6 +449,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flag_id** | **int**| numeric ID of the flag to get | |
+| **limit** | **int**| the number of snapshots to return | [optional] |
+| **offset** | **int**| return snapshots given the offset, it should usually set together with limit | [optional] |
+| **sort** | **string**| sort order | [optional] |
 
 ### Return type
 

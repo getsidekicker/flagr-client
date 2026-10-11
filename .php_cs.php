@@ -44,9 +44,9 @@ return (new PhpCsFixer\Config())
             ],
 
             // the body of each structure MUST be enclosed by braces, braces should be properly placed, body of braces should be properly indented.
-            'braces' => [
+            'braces_position' => [
                 // whether single line lambda notation should be allowed
-                'allow_single_line_closure' => true,
+                'allow_single_line_anonymous_functions' => true,
             ],
 
             // a single space should be between cast and variable.
@@ -56,7 +56,7 @@ return (new PhpCsFixer\Config())
             'concat_space' => ['spacing' => 'one'],
 
             // add missing space between function's argument and its typehint.
-            'function_typehint_space' => true,
+            'type_declaration_spaces' => true,
 
             // include/require and file path should be divided with a single space. File path should not be placed under brackets.
             'include' => true,
@@ -115,7 +115,7 @@ return (new PhpCsFixer\Config())
             'object_operator_without_whitespace' => true,
 
             // there should be exactly one blank line before a namespace declaration.
-            'single_blank_line_before_namespace' => true,
+            'blank_lines_before_namespace' => true,
 
             // standardize spaces around ternary operator.
             'ternary_operator_spaces' => true,

@@ -1,4 +1,4 @@
-# # PutVariantRequest
+# PutVariantRequest
 
 ## Properties
 

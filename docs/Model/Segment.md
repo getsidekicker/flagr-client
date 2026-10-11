@@ -1,4 +1,4 @@
-# # Segment
+# Segment
 
 ## Properties
 

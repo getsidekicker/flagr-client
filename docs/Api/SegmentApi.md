@@ -1,5 +1,7 @@
 # Flagr\Client\SegmentApi
 
+Segment defines the audience of the flag, it&#39;s the user segmentation
+
 All URIs are relative to /api/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |

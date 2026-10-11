@@ -1,4 +1,4 @@
-# # CreateFlagRequest
+# CreateFlagRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # Distribution
+# Distribution
 
 ## Properties
 

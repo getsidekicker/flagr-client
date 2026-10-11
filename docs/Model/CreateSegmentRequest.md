@@ -1,4 +1,4 @@
-# # CreateSegmentRequest
+# CreateSegmentRequest
 
 ## Properties
 

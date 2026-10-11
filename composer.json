@@ -12,7 +12,7 @@
   "homepage": "https://github.com/getsidekicker/flagr-client",
   "license": "MIT",
   "require": {
-    "php": ">=7.4",
+    "php": "^8.1",
     "ext-curl": "*",
     "ext-json": "*",
     "ext-mbstring": "*",
@@ -20,7 +20,8 @@
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.0",
-    "rector/rector": "^0.11.47"
+    "rector/rector": "^2.0",
+    "phpstan/phpstan": "^2.0"
   },
   "autoload": {
     "psr-4": {
@@ -29,6 +30,12 @@
   },
   "scripts": {
     "fixer": "vendor/bin/php-cs-fixer fix --config=./.php_cs.php --using-cache=no",
-    "rector": "vendor/bin/rector process lib"
+    "rector": "vendor/bin/rector process lib",
+    "phpstan": "vendor/bin/phpstan analyse --memory-limit=1G"
+  },
+  "config": {
+    "platform": {
+      "php": "8.1.0"
+    }
   }
 }

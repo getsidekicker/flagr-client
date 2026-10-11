@@ -1,5 +1,7 @@
 # Flagr\Client\DistributionApi
 
+Distribution is the percent distribution of variants within that segment
+
 All URIs are relative to /api/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |

@@ -1,4 +1,4 @@
-# # EvaluationBatchRequest
+# EvaluationBatchRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # Variant
+# Variant
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# # EvaluationEntity
+# EvaluationEntity
 
 ## Properties
 

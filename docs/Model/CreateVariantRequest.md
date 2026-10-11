@@ -1,4 +1,4 @@
-# # CreateVariantRequest
+# CreateVariantRequest
 
 ## Properties
 

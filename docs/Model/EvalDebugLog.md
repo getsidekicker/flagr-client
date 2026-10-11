@@ -1,4 +1,4 @@
-# # EvalDebugLog
+# EvalDebugLog
 
 ## Properties
 

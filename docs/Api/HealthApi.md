@@ -1,5 +1,7 @@
 # Flagr\Client\HealthApi
 
+Check if Flagr is healthy
+
 All URIs are relative to /api/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
